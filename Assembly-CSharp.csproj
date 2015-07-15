@@ -78,6 +78,7 @@
      <Compile Include="Assets\Example Games\Hat Trick - The Catch Game\Scripts\HT_StartGame.cs" />
      <Compile Include="Assets\Scripts\GameController.cs" />
      <Compile Include="Assets\Scripts\LoadScene.cs" />
+     <Compile Include="Assets\Scripts\MoreSpeed.cs" />
      <Compile Include="Assets\Scripts\MyManager.cs" />
      <Compile Include="Assets\Scripts\Obstacle.cs" />
      <Compile Include="Assets\Scripts\PlayerControler.cs" />

@@ -11,6 +11,7 @@ public class GameController : MonoBehaviour {
  	private float startTime;
 	private float journeyLength;
 
+	public Button startButton;	
 	public float timeBetweenMissiles;
 	public Animator[] animations;
 	public Animator playerAnimator;
@@ -34,6 +35,8 @@ public class GameController : MonoBehaviour {
 
 	void Start () 
 	{
+		StartButton();
+
 		if(PlayerPrefs.GetInt("ExistHighScore") == 1)
 		{
 			highScore.text = PlayerPrefs.GetFloat("HighScore").ToString();
@@ -175,8 +178,6 @@ public class GameController : MonoBehaviour {
 		Time.timeScale *= 1.3f;
 		speedOfDistance *= 1.3f;
 
-		Debug.Log("!!!!!!!!!!!!!!");
-
 		if(timeToFinish)
 		{
 			StartCoroutine(AuxIncreaseGameSpeed());
@@ -188,6 +189,10 @@ public class GameController : MonoBehaviour {
 		yield return new WaitForSeconds(7);
 		Time.timeScale /= 1.3f;
 		speedOfDistance /= 1.3f;
+	}
+
+	private void StartButton(){
+		startButton.onClick.AddListener(() => StartGame());
 	}
 
 
