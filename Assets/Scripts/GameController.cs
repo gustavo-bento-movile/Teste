@@ -170,7 +170,7 @@ public class GameController : MonoBehaviour {
 	IEnumerator ReloadScene()
 	{
 		yield return new WaitForSeconds (1.2f);
-		Application.LoadLevel ("Game");
+		Application.LoadLevel ("Game 1");
 	}
 
 	public void IncreaseGameSpeed(bool timeToFinish)
